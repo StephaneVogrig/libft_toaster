@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 01:42:18 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/07 15:09:29 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/08 01:04:36 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ void	log_test_int_int(int n1, int n2, int fd)
 	log_test_int(n1, fd);
 	ft_putstr_fd(", ", fd);
 	ft_putnbr_fd(n2, fd);
-	
 }
 
 void	log_test_str_str(char *s1, char *s2, int fd)

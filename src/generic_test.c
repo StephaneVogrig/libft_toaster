@@ -6,13 +6,13 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 02:06:08 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/06 04:04:07 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/08 01:04:24 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_test_stephane.h"
 
-void    gen_test_int_ref_int_to_int(int (*ft_user)(int), int (*fref)(int), int start,int end, int fd)
+void	gen_test_int_ref_int_to_int(int (*ft_user)(int), int (*fref)(int), int start,int end, int fd)
 {
     int	error;
 	int	result_ref;
@@ -25,8 +25,7 @@ void    gen_test_int_ref_int_to_int(int (*ft_user)(int), int (*fref)(int), int s
 	{
 		result_ref = fref(i);
 		result_user = ft_user(i);
-
-		if(result_user != result_ref)
+		if (result_user != result_ref)
 		{
 			error++;
 			log_test_int(i, fd);
@@ -34,7 +33,7 @@ void    gen_test_int_ref_int_to_int(int (*ft_user)(int), int (*fref)(int), int s
 		}
 		++i;
 	}
-	print_succes(error == 0);		
+	print_succes(error == 0);
 }
 
 void	generic_test_putstr(void (*ft_user)(char *, int), char* str_test, char *expected, int file_msg_error)
@@ -61,6 +60,4 @@ void	generic_test_putstr(void (*ft_user)(char *, int), char* str_test, char *exp
 
 	free(user);
 	close(file_result);
-
-
 }

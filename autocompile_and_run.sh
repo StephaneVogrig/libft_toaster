@@ -10,13 +10,13 @@ while true; do
   draw_line
   
   echo norminette
-  #norminette ../libft/*.c ../libft/*.h | grep -v 'OK'
-  norminette libft/*.c libft/*.h | grep -v 'OK'
+  norminette ../libft/*.c ../libft/*.h | grep -v 'OK'
+  #norminette libft/*.c libft/*.h | grep -v 'OK'
   
   draw_line
   
   echo make libft
-  make -C libft
+  make -C ../libft
   
   #draw_line
   
