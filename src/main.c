@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 02:36:31 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/08 23:49:33 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/09 10:46:59 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(void)
 	write(1, "part 1\n", 7);
 	write(1, "--------------------------------------------------------------------------------\n", 81);
 /*
-	isalpha_tests();
+*/	isalpha_tests();
 	isdigit_tests();
 	isalnum_tests();
 	isascii_tests();
@@ -69,8 +69,8 @@ int main(void)
 
     substr_tests();
 	strjoin_tests();
-*/	strtrim_tests();
-/*	split_tests();
+	strtrim_tests();
+	split_tests();
 	itoa_tests();
 	strmapi_tests();
 	striteri_tests();
@@ -81,6 +81,6 @@ int main(void)
 
 	write(1, "--------------------------------------------------------------------------------\n", 81);
 	ft_putptr_fd_tests();
-
+/*
 */
 }

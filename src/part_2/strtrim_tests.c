@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:22:38 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/07 00:35:41 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/09 15:50:14 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,12 @@ void	strtrim_tests(void)
 
 	print_fct_name("ft_strtrim");
 		
-	test("12345ABCDEabcde12345", "12345", "ABCDEabcde", file_msg_error);
+	test("12345_ABCDE_12345", "12345", "_ABCDE_", file_msg_error);
 	test("12345ABCDEabcde12345", "", "12345ABCDEabcde12345", file_msg_error);
 	test("12345ABCDEabcde12345", "ABCDE", "12345ABCDEabcde12345", file_msg_error);
 	test("12345ABCDEabcde12345", "ABCDEabcde", "12345ABCDEabcde12345",file_msg_error);
 	test("12345ABCDEabcde12345", "ABCDEabcde12345", "", file_msg_error);
+	test("", "", "", file_msg_error);
 
 	printf("\n");
 

@@ -6,10 +6,31 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:11:19 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/06 22:02:13 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/09 18:58:23 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+#include <stdlib.h>
+
+void *calloc(size_t nmemb, size_t size);
+
+La fonction calloc() alloue de la mémoire
+- pour un tableau de nmemb éléments de size octets chacun
+- renvoie un pointeur sur la mémoire allouée.
+- La mémoire est mise à zéro.
+- Si nmemb ou size vaut 0, calloc() renvoie soit NULL,
+  soit un pointeur unique qui peut être passé avec succès à free().
+- Si la multiplication de nmemb et de size entraîne un dépassement d'int
+  calloc() renvoie une erreur.
+
+En revanche, un dépassement d'entier ne serait pas détecté
+dans l'appel suivant à malloc(), ce qui aurait pour conséquence
+d'allouer un bloc de mémoire de taille incorrecte:
+
+           malloc(nmemb * size)
+
+*/
 #include "libft_test_stephane.h"
 
 static void	test(size_t nmemb, size_t size, int fd_mesg_error)

@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:19:23 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/06 04:35:02 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/09 15:13:46 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	itoa_tests(void)
 	itoa_test(123, "123", file_msg_error);
 	itoa_test(-123, "-123", file_msg_error);
 	itoa_test(-2147483648, "-2147483648", file_msg_error);
+	itoa_test(2147483647, "2147483647", file_msg_error);
 	printf("\n");
 
 	print_message_error(file_msg_error);

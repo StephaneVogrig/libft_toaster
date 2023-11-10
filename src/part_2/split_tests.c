@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:21:32 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/08 14:48:21 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/09 10:48:48 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	test(char *str, char c)
 	{
 		printf("echec allocation memoire");
 		return ;
-	}
+	}/*
 	while (*tab)
 	{
 		ft_putnbr_fd(i, 1);
@@ -32,7 +32,7 @@ static void	test(char *str, char c)
 		ft_putstr_fd("\n", 1);
 		i++;
 		tab++;
-	}
+	}*/
 	//free(tab);
 }
 
