@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   substr_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:22:58 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/06 18:43:36 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/11 21:04:09 by stephane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	test(char *s, unsigned int start, size_t len, char *expected, int fi
 		log_test_str_int_int(s, start, len, file_msg_error);
 		log_result_str_str(expected, str_user, file_msg_error);
 	}
-
+	free(str_user);
 }
 void	substr_tests(void)
 {

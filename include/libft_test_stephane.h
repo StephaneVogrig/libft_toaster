@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft_test_stephane.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:50:56 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/07 21:17:44 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/12 18:21:40 by stephane         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #ifndef LIBFT_TEST_STEPHANE_H
 # define LIBFT_TEST_STEPHANE_H
@@ -58,6 +58,10 @@ void	print_result_char_int_int(char passed, int expected, int obtained);
 void	print_result_str_int_int(char *passed, int expected, int obtained);
 void    print_fct_name(const char* name);
 void	print_message_error(int fd);
+
+void	log_tested_title(int fd);
+void	log_expected_title(int fd);
+void	log_obtained_title(int fd);
 
 void	log_result_str(char *expected, char *user, int fd);
 void	log_result_int(int expected, int user, int fd);

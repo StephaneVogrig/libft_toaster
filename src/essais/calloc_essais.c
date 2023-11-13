@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   calloc_essais.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 19:00:16 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/09 19:21:22 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/11 12:36:13 by stephane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,4 @@ int	main(void)
 	ptr = (char *)calloc(10, 10);
 	printf("calloc(10, 10) = %p sizeof = %lu\n", ptr, sizeof(ptr));
 }
+abort

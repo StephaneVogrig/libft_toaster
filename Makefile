@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+         #
+#    By: stephane <stephane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 23:35:34 by svogrig           #+#    #+#              #
-#    Updated: 2023/11/09 16:15:11 by svogrig          ###   ########.fr        #
+#    Updated: 2023/11/11 20:45:10 by stephane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,7 @@ BUILD_DIR	:=	.build
 OBJS		:=	$(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 DEPS		:=	$(OBJS:.o=.d)
 
-CC			:=	cc
+CC			:=	gcc
 CFLAGS		:=	-Wall -Wextra -Werror
 CPPFLAGS	:=	$(addprefix -I,$(INCS)) -MMD -MP
 LDFLAGS		:=	$(addprefix -L,$(dir $(LIBS_TARGET)))

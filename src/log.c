@@ -1,33 +1,50 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   log.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 01:42:18 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/08 01:04:36 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/12 18:18:21 by stephane         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include "libft_test_stephane.h"
 
-void	log_test_str(char *str, int fd)
+void	log_tested_title(int fd)
 {
 	ft_putstr_fd("tested value = \"", fd);
+}
+
+void	log_expected_title(int fd)
+{
+	
+	ft_putstr_fd(" : expected ", fd);
+}
+
+void	log_obtained_title(int fd)
+{
+	
+	ft_putstr_fd(" : obtained ", fd);
+}
+
+void	log_test_str(char *str, int fd)
+{
+	log_tested_title(fd);
 	ft_putstr_fd(str, fd);
 	ft_putstr_fd("\"", fd);
 }
 
 void	log_test_ptr(void *ptr, int fd)
 {
-	ft_putstr_fd("tested value = ", fd);
+	log_tested_title(fd);
 	ft_putptr_fd(ptr, fd);
 }
 
 void	log_test_int(int n, int fd)
 {
-	ft_putstr_fd("tested value = ", fd);
+	log_tested_title(fd);
 	ft_putnbr_fd(n, fd);
 }
 
@@ -125,6 +142,7 @@ void	log_result_ptr_ptr(void *ptr_expected, void *ptr_user, int fd)
 	ft_putptr_fd(ptr_user, fd);
 	ft_putstr_fd("\n", fd);
 }
+
 /*
 void	log_expected_int_str(int n, char *str, int fd)
 {

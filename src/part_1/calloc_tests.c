@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   calloc_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:11:19 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/09 18:58:23 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/11 20:56:58 by stephane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,10 @@ static void	test(size_t nmemb, size_t size, int fd_mesg_error)
 	ptr_expected = calloc(nmemb, size);
 	if(ptr_user == NULL && ptr_expected != NULL)
 	{
-		free(ptr_expected);
 		error = 1;
 	}
 	if(ptr_user != NULL && ptr_expected == NULL)
 	{
-		free(ptr_user);
 		error = 1;
 	}
 	print_succes(error == 0);
@@ -58,6 +56,9 @@ static void	test(size_t nmemb, size_t size, int fd_mesg_error)
 		log_test_int_int(nmemb, size, fd_mesg_error);
 		log_result_ptr_ptr(ptr_expected, ptr_user, fd_mesg_error);
 	}
+	free(ptr_expected);
+	free(ptr_user);
+	
 }
 
 void	calloc_tests(void)

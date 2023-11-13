@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   split_tests.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:21:32 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/09 10:48:48 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/11 23:00:26 by stephane         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include "libft_test_stephane.h"
 
@@ -17,23 +17,23 @@ static void	test(char *str, char c)
 	char	**tab;
 	int		i;
 
-	i = 0;
 	tab = ft_split(str, c);
 	if (!tab)
 	{
 		printf("echec allocation memoire");
 		return ;
-	}/*
-	while (*tab)
+	}
+	i = 0;
+	while (tab[i])
 	{
-		ft_putnbr_fd(i, 1);
+		/*ft_putnbr_fd(i, 1);
 		ft_putstr_fd(" = ", 1);
-		ft_putstr_fd(*tab, 1);
-		ft_putstr_fd("\n", 1);
+		ft_putstr_fd(tab[i], 1);
+		ft_putstr_fd("\n", 1);*/
+		free(tab[i]);
 		i++;
-		tab++;
-	}*/
-	//free(tab);
+	}
+	free(tab);
 }
 
 void	split_tests(void)

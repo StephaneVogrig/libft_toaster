@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strncmp_tests.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:08:49 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/05 22:54:16 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/11 12:39:51 by stephane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	strncmp_subtest(const char *s1, const char *s2, int n, int fd)
 void	strncmp_test(const char *s1, const char *s2, int fd)
 {
 	int 	nbr_error;
-	size_t	n;
 	size_t	len1;
 	size_t	len2;
 
@@ -41,7 +40,6 @@ void	strncmp_test(const char *s1, const char *s2, int fd)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 
-	n = 0;
 	nbr_error += strncmp_subtest(s1, s2, 0, fd);
 	nbr_error += strncmp_subtest(s1, s2, len1 - 1, fd);
 	nbr_error += strncmp_subtest(s1, s2, len1, fd);
