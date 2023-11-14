@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:10:20 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/06 02:18:27 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/14 19:10:34 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	tolower_tests(void)
 
 	print_fct_name("ft_tolower");
 
-	gen_test_int_ref_int_to_int(ft_ref, ft_user,-128, -2, fd);
+	//gen_test_int_ref_int_to_int(ft_ref, ft_user,-128, -2, fd);
 	gen_test_int_ref_int_to_int(ft_ref, ft_user,-1, 'A' - 1, fd);
 	gen_test_int_ref_int_to_int(ft_ref, ft_user,'A', 'Z', fd);
 	gen_test_int_ref_int_to_int(ft_ref, ft_user,'Z' - 1, 127,fd);

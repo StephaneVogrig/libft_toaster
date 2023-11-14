@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:06:05 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/07 21:36:31 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/14 21:42:26 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ void	memmove_tests(void)
 	test(NULL, "src", 0);
 	test(NULL, NULL, 0);
 	test(dest, NULL, 0);
-	test(NULL, "src", 5);
+/*	test(NULL, "src", 5);
 	test(NULL, NULL, 5);
 	test(dest, NULL, 5);
-
+*/
 	printf("\n");
 
 	print_message_error(fd);

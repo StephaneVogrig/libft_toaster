@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   calloc_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:11:19 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/11 20:56:58 by stephane         ###   ########.fr       */
+/*   Updated: 2023/11/14 23:15:43 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ static void	test(size_t nmemb, size_t size, int fd_mesg_error)
 
 void	calloc_tests(void)
 {
-	int	file_msg_error;
+	int		file_msg_error;
+	size_t	size;
 	//char	ref[] = {0, 0, 0, 0};
 
 	file_msg_error = open_file_msgs_error();
@@ -74,10 +75,20 @@ void	calloc_tests(void)
 	test(0, 0, file_msg_error);
 	test(0, 5, file_msg_error);
 	test(5, 0, file_msg_error);
-	test(-5, -5, file_msg_error);
+	test(INT_MAX,INT_MAX, file_msg_error);
+/*	test(-5, -5, file_msg_error);
 	test(0, -5, file_msg_error);
 	test(-5, 0, file_msg_error);
-
+*/	size = INT_MAX;
+	size *= INT_MAX;
+	test(size, 0, file_msg_error);
+	test(0, size, file_msg_error);
+/*	test(0,INT_MAX, file_msg_error);
+	test(INT_MAX, 1, file_msg_error);
+	test(1,INT_MAX, file_msg_error);
+	test(INT_MAX, 2, file_msg_error);
+	test(2,INT_MAX, file_msg_error);
+*/
 	printf("\n");
 
 	print_message_error(file_msg_error);

@@ -1,32 +1,32 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   log.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 01:42:18 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/12 18:18:21 by stephane         ###   ########.fr       */
+/*   Updated: 2023/11/14 11:55:08 by svogrig          ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include "libft_test_stephane.h"
 
 void	log_tested_title(int fd)
 {
-	ft_putstr_fd("tested value = \"", fd);
+	write(fd, "tested value = ", 15);
 }
 
 void	log_expected_title(int fd)
 {
 	
-	ft_putstr_fd(" : expected ", fd);
+	write(fd, " : expected ", 12);
 }
 
 void	log_obtained_title(int fd)
 {
 	
-	ft_putstr_fd(" : obtained ", fd);
+	write(fd, " : obtained ", 12);
 }
 
 void	log_test_str(char *str, int fd)
@@ -142,15 +142,3 @@ void	log_result_ptr_ptr(void *ptr_expected, void *ptr_user, int fd)
 	ft_putptr_fd(ptr_user, fd);
 	ft_putstr_fd("\n", fd);
 }
-
-/*
-void	log_expected_int_str(int n, char *str, int fd)
-{
-	dprintf(fd, " : expected %n, \"%s\"", &n, str);
-}
-
-void	log_obtain_int_str(int n, char *str, int fd)
-{
-	dprintf(fd, " : obtained %n, \"%s\"", &n, str);
-}
-*/

@@ -25,7 +25,7 @@ while true; do
   
  # draw_line
   
- ./libft_test_stephane
+ ./libft_toaster
  
   #draw_line
   

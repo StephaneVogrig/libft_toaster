@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strncmp_tests.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:08:49 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/11 12:39:51 by stephane         ###   ########.fr       */
+/*   Updated: 2023/11/14 22:44:26 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 int	strncmp_subtest(const char *s1, const char *s2, int n, int fd)
 {
-	int		error;
-	int		result_user;
-	int		result_expected;
+	int	error;
+	int	result_user;
+	int	result_expected;
+	int	succes;
 
 	result_user = ft_strncmp(s1, s2, n);
 	result_expected = strncmp(s1, s2, n);
 
-	error = result_user != result_expected;
+	succes = (result_user == result_expected);
+	succes += (result_user < 0 && result_expected < 0);
+	succes += (result_user > 0 && result_expected > 0);
+	error = !succes;
 	if (error)
 	{
 		log_test_str_str_int((char *)s1, (char *)s2, n, fd);
@@ -30,7 +34,7 @@ int	strncmp_subtest(const char *s1, const char *s2, int n, int fd)
 	return (error);
 }
 
-void	strncmp_test(const char *s1, const char *s2, int fd)
+void	strncmp_test(const char *s1, const char *s2,  int fd)
 {
 	int 	nbr_error;
 	size_t	len1;
@@ -40,7 +44,7 @@ void	strncmp_test(const char *s1, const char *s2, int fd)
 	len1 = strlen(s1);
 	len2 = strlen(s2);
 
-	nbr_error += strncmp_subtest(s1, s2, 0, fd);
+	nbr_error += strncmp_subtest(s1, s2, 0,fd);
 	nbr_error += strncmp_subtest(s1, s2, len1 - 1, fd);
 	nbr_error += strncmp_subtest(s1, s2, len1, fd);
 	nbr_error += strncmp_subtest(s1, s2, len1 + 1, fd);
