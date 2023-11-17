@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: stephane <stephane@student.42.fr>          +#+  +:+       +#+         #
+#    By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 23:35:34 by svogrig           #+#    #+#              #
-#    Updated: 2023/11/11 20:45:10 by stephane         ###   ########.fr        #
+#    Updated: 2023/11/15 22:14:43 by svogrig          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRC_TESTER	:=	main.c \
 				generic_test.c \
 				log.c \
 				print.c \
+				put.c \
 				ft_putptr_fd.c \
 				perso/ft_putptr_fd_tests.c
 				

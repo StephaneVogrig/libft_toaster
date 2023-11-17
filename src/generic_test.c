@@ -6,7 +6,7 @@
 /*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 02:06:08 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/08 01:04:24 by svogrig          ###   ########.fr       */
+/*   Updated: 2023/11/15 22:29:46 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	gen_test_int_ref_int_to_int(int (*ft_user)(int), int (*fref)(int), int start,int end, int fd)
 {
-    int	error;
+	int	error;
 	int	result_ref;
 	int	result_user;
 	int	i;
@@ -38,8 +38,8 @@ void	gen_test_int_ref_int_to_int(int (*ft_user)(int), int (*fref)(int), int star
 
 void	generic_test_putstr(void (*ft_user)(char *, int), char* str_test, char *expected, int file_msg_error)
 {
-	char		*user;
-	int			error;
+	char	*user;
+	int		error;
 	int		file_result;
 
 	file_result = open_file_test_result();

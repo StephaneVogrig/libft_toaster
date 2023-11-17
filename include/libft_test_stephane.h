@@ -1,20 +1,20 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   libft_test_stephane.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svogrig <svogrig@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:50:56 by svogrig           #+#    #+#             */
-/*   Updated: 2023/11/12 18:21:40 by stephane         ###   ########.fr       */
+/*   Updated: 2023/11/16 23:57:26 by svogrig          ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #ifndef LIBFT_TEST_STEPHANE_H
 # define LIBFT_TEST_STEPHANE_H
 
-# include "libft.h"
 # include <stdio.h>
+# include <unistd.h>
 # include <stdbool.h>
 # include <ctype.h>
 # include <string.h>
@@ -24,6 +24,7 @@
 # include <stdlib.h>
 # include <time.h>
 # include <stdarg.h>
+# include "libft.h"
 
 // couleurs shell : https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
 # define RESET "\033[0m"
@@ -47,17 +48,28 @@
 # define SUCCES 1
 # define FAILED 0
 
+# ifndef INT_MIN
+#  define INT_MIN -2147483648
+# endif
+# ifndef INT_MAX
+#  define INT_MAX 2147483647
+# endif
+/*
 typedef struct s_str_list
 {
 	char	*str;
 	t_list	*next;
 }	str_list;
-
+*/
 void	print_succes(bool succes);
 void	print_result_char_int_int(char passed, int expected, int obtained);
 void	print_result_str_int_int(char *passed, int expected, int obtained);
-void    print_fct_name(const char* name);
+void	print_fct_name(const char *name);
 void	print_message_error(int fd);
+
+void	put_str(char *str, int fd);
+void	put_int(int n, int fd);
+void	put_ptr(void *ptr, int fd);
 
 void	log_tested_title(int fd);
 void	log_expected_title(int fd);
