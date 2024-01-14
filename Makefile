@@ -10,16 +10,23 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft_toaster
-
 #------------------------------------------------------------------------------#
-# variables                                                                    #
+# variables libraries                                                          #
 #------------------------------------------------------------------------------#
 
 LIBFT_DIR	:=	../
-LIBS		:=	ft bsd
+LIBS		:=	ft \
+                bsd
 LIBS_TARGET	:=	$(LIBFT_DIR)/libft/libft.a
 
+LDFLAGS		:=	$(addprefix -L,$(dir $(LIBS_TARGET)))
+LDLIBS		:=	$(addprefix -l,$(LIBS))
+
+#------------------------------------------------------------------------------#
+# variables libft_toaster                                                      #
+#------------------------------------------------------------------------------#
+
+NAME        :=  libft_toaster
 INCS		:=	include \
 				$(LIBFT_DIR)/libft
 
@@ -93,10 +100,9 @@ OBJS		:=	$(SRCS:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
 DEPS		:=	$(OBJS:.o=.d)
 
 CC			:=	gcc
+
 CFLAGS		:=	-Wall -Wextra -Werror
 CPPFLAGS	:=	$(addprefix -I,$(INCS)) -MMD -MP
-LDFLAGS		:=	$(addprefix -L,$(dir $(LIBS_TARGET)))
-LDLIBS		:=	$(addprefix -l,$(LIBS))
 
 RM          :=	rm -f
 MAKEFLAGS   +=	--no-print-directory
